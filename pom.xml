@@ -39,9 +39,19 @@
                     <url>packagecloud+https://packagecloud.io/calebeoliveira/snapshot</url>
                 </snapshotRepository>
             </distributionManagement>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
+        </profile>
+        <profile>
+            <id>nexus_distro</id>
+            <distributionManagement>
+                <repository>
+                    <id>nexus-release</id>
+                    <url>http://localhost:8081/repository/nexus-release/</url>
+                </repository>
+                <snapshotRepository>
+                    <id>nexus-snapshot</id>
+                    <url>http://localhost:8081/repository/nexus-snapshot/</url>
+                </snapshotRepository>
+            </distributionManagement>
         </profile>
     </profiles>
 </project>
